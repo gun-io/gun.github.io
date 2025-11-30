@@ -1,0 +1,1217 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专升本英语高频词 - 第6组第2页 (单词331-360)</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .page-title {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .group-info {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        /* 卡片样式 */
+        .flashcard {
+            width: 100%;
+            height: 500px;
+            perspective: 1000px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            border-radius: 15px;
+        }
+        
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border-radius: 15px;
+        }
+        
+        .flashcard-front {
+            background: white;
+            color: #333;
+        }
+        
+        .flashcard-back {
+            background: #f8f9fa;
+            color: #2c3e50;
+            transform: rotateY(180deg);
+            text-align: left;
+        }
+        
+        /* 卡片内容样式 */
+        .word-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 16px;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+        
+        .word {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #2c3e50;
+        }
+        
+        .phonetic {
+            font-size: 24px;
+            color: #3498db;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .flip-hint {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        .word-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
+            width: 100%;
+        }
+        
+        .definition, .occurrence, .example {
+            font-size: 18px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: #3498db;
+            margin-right: 10px;
+        }
+        
+        .example {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        
+        /* 按钮样式 */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            background: #3498db;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            background: #2980b9;
+        }
+        
+        .btn-prev {
+            background: #2ecc71;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        .btn-prev:hover {
+            background: #27ae60;
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+        }
+        
+        .btn-next {
+            background: #e74c3c;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn-next:hover {
+            background: #c0392b;
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn-home {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #9b59b6;
+        }
+        
+        .btn-home:hover {
+            background: #8e44ad;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .flashcard {
+                height: 400px;
+            }
+            
+            .word {
+                font-size: 40px;
+            }
+            
+            .phonetic {
+                font-size: 20px;
+            }
+            
+            .word-title {
+                font-size: 26px;
+            }
+            
+            .definition, .occurrence, .example {
+                font-size: 16px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .flashcard {
+                height: 350px;
+            }
+            
+            .flashcard-front, .flashcard-back {
+                padding: 20px;
+            }
+            
+            .word {
+                font-size: 32px;
+            }
+            
+            .word-title {
+                font-size: 22px;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn btn-home">返回总目录</a>
+    
+    <div class="container">
+        <h1 class="page-title">专升本英语高频核心600词</h1>
+        <div class="group-info">
+            第6组第2页 | 单词 331 - 360 | 共20页
+        </div>
+        
+        <!-- 单词卡片容器 -->
+        <div class="card-container">
+            
+        <div class="flashcard" id="card0">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 331</div>
+                    <div class="word">strengthen</div>
+                    <div class="phonetic">/ˈstreŋθən/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">strengthen /ˈstreŋθən/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        vt. 加强
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        11 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The word 'strengthen' is often used in academic writing.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card1">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 332</div>
+                    <div class="word">ambassador</div>
+                    <div class="phonetic">/æmˈbæsədə(r)/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">ambassador /æmˈbæsədə(r)/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 大使
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        10 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An ambassador plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card2">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 333</div>
+                    <div class="word">arrange</div>
+                    <div class="phonetic">/əˈreɪndʒ/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">arrange /əˈreɪndʒ/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        v. 安排；布置
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        13 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        They arrang their homework every day.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card3">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 334</div>
+                    <div class="word">classic</div>
+                    <div class="phonetic">/ˈklæsɪk/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">classic /ˈklæsɪk/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 经典作品
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        17 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The classic is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card4">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 335</div>
+                    <div class="word">imaginary</div>
+                    <div class="phonetic">/ɪˈmædʒɪnəri/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">imaginary /ɪˈmædʒɪnəri/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 想象中的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        11 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a imaginary opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card5">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 336</div>
+                    <div class="word">inflation</div>
+                    <div class="phonetic">/ɪnˈfleɪʃn/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">inflation /ɪnˈfleɪʃn/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 通货膨胀
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        14 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An inflation plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card6">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 337</div>
+                    <div class="word">useless</div>
+                    <div class="phonetic">/ˈjuːsləs/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">useless /ˈjuːsləs/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 无用的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        12 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a useless opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card7">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 338</div>
+                    <div class="word">athlete</div>
+                    <div class="phonetic">/ˈæθliːt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">athlete /ˈæθliːt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 运动员
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        18 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An athlete plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card8">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 339</div>
+                    <div class="word">instinct</div>
+                    <div class="phonetic">/ˈɪnstɪŋkt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">instinct /ˈɪnstɪŋkt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 本能；直觉
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        17 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An instinct plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card9">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 340</div>
+                    <div class="word">passport</div>
+                    <div class="phonetic">/ˈpɑːspɔːt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">passport /ˈpɑːspɔːt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 护照
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        24 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The passport is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card10">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 341</div>
+                    <div class="word">instruct</div>
+                    <div class="phonetic">/ɪnˈstrʌkt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">instruct /ɪnˈstrʌkt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        vt. 指示；教育
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        15 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The word 'instruct' is often used in academic writing.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card11">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 342</div>
+                    <div class="word">arrangement</div>
+                    <div class="phonetic">/əˈreɪndʒmənt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">arrangement /əˈreɪndʒmənt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 安排
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        9 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An arrangement plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card12">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 343</div>
+                    <div class="word">circuit</div>
+                    <div class="phonetic">/ˈsɜːkɪt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">circuit /ˈsɜːkɪt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 电路；环行
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        17 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The circuit is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card13">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 344</div>
+                    <div class="word">industrial</div>
+                    <div class="phonetic">/ɪnˈdʌstriəl/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">industrial /ɪnˈdʌstriəl/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 工业的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        13 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a industrial opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card14">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 345</div>
+                    <div class="word">transport</div>
+                    <div class="phonetic">/trænsˈpɔːt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">transport /trænsˈpɔːt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        vt./n. 运输
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        21 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The transport is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card15">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 346</div>
+                    <div class="word">dilemma</div>
+                    <div class="phonetic">/dɪˈlemə/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">dilemma /dɪˈlemə/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 困境
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        18 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The dilemma is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card16">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 347</div>
+                    <div class="word">intensive</div>
+                    <div class="phonetic">/ɪnˈtensɪv/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">intensive /ɪnˈtensɪv/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 加强的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        16 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a intensive opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card17">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 348</div>
+                    <div class="word">affection</div>
+                    <div class="phonetic">/əˈfekʃn/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">affection /əˈfekʃn/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 喜爱
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        28 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An affection plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card18">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 349</div>
+                    <div class="word">steady</div>
+                    <div class="phonetic">/ˈstedi/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">steady /ˈstedi/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 平稳的；稳固的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        18 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a steady opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card19">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 350</div>
+                    <div class="word">dramatic</div>
+                    <div class="phonetic">/drəˈmætɪk/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">dramatic /drəˈmætɪk/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 激动人心的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        14 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a dramatic opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card20">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 351</div>
+                    <div class="word">being</div>
+                    <div class="phonetic">/ˈbiːɪŋ/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">being /ˈbiːɪŋ/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 人；存在
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        21 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The being is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card21">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 352</div>
+                    <div class="word">award</div>
+                    <div class="phonetic">/əˈwɔːd/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">award /əˈwɔːd/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        vt. 授予；n. 奖
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        13 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An award plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card22">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 353</div>
+                    <div class="word">obtain</div>
+                    <div class="phonetic">/əbˈteɪn/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">obtain /əbˈteɪn/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        vt. 获得
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        13 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The word 'obtain' is often used in academic writing.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card23">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 354</div>
+                    <div class="word">commence</div>
+                    <div class="phonetic">/kəˈmens/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">commence /kəˈmens/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        v. 开始
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        21 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        They commenc their homework every day.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card24">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 355</div>
+                    <div class="word">commerce</div>
+                    <div class="phonetic">/ˈkɒmɜːs/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">commerce /ˈkɒmɜːs/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 商业
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        13 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The commerce is essential for our work.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card25">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 356</div>
+                    <div class="word">instrument</div>
+                    <div class="phonetic">/ˈɪnstrəmənt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">instrument /ˈɪnstrəmənt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        n. 工具；乐器
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        12 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        An instrument plays an important role in our life.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card26">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 357</div>
+                    <div class="word">sufficient</div>
+                    <div class="phonetic">/səˈfɪʃnt/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">sufficient /səˈfɪʃnt/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 足够的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        14 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a sufficient opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card27">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 358</div>
+                    <div class="word">generally</div>
+                    <div class="phonetic">/ˈdʒenrəli/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">generally /ˈdʒenrəli/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adv. 通常；普遍地
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        12 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        We generally this activity regularly.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card28">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 359</div>
+                    <div class="word">comparative</div>
+                    <div class="phonetic">/kəmˈpærətɪv/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">comparative /kəmˈpærətɪv/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        adj. 比较的
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        21 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        This is a comparative opportunity for us.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flashcard" id="card29">
+            <div class="flashcard-inner">
+                <!-- 卡片正面：单词和音标 -->
+                <div class="flashcard-front">
+                    <div class="word-number">单词 360</div>
+                    <div class="word">accompany</div>
+                    <div class="phonetic">/əˈkʌmpəni/</div>
+                    <div class="flip-hint">点击卡片翻转</div>
+                </div>
+                <!-- 卡片背面：详细信息 -->
+                <div class="flashcard-back">
+                    <div class="word-title">accompany /əˈkʌmpəni/</div>
+                    <div class="definition">
+                        <span class="label">释义：</span>
+                        vt. 陪伴；伴随
+                    </div>
+                    <div class="occurrence">
+                        <span class="label">出现次数：</span>
+                        18 次
+                    </div>
+                    <div class="example">
+                        <span class="label">例句：</span>
+                        The word 'accompany' is often used in academic writing.
+                    </div>
+                    <div class="flip-hint">点击卡片返回</div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+        <!-- 导航按钮 -->
+        <div class="nav-buttons">
+            <a href="word_page_11.html" class="btn btn-prev">上一页</a>
+            <a href="word_page_13.html" class="btn btn-next">下一页</a>
+        </div>
+    </div>
+
+    <script>
+        // 卡片翻转功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const flashcards = document.querySelectorAll('.flashcard');
+            
+            // 显示第一张卡片，隐藏其他卡片
+            let currentCardIndex = 0;
+            const totalCards = flashcards.length;
+            
+            // 初始化显示第一张卡片
+            function showCard(index) {
+                flashcards.forEach((card, idx) => {
+                    card.style.display = idx === index ? 'block' : 'none';
+                });
+            }
+            
+            showCard(currentCardIndex);
+            
+            // 卡片点击翻转
+            flashcards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', function(e) {
+                // 左箭头或上箭头：上一张
+                if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
+                    showCard(currentCardIndex);
+                }
+                // 右箭头或下箭头：下一张
+                else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    currentCardIndex = (currentCardIndex + 1) % totalCards;
+                    showCard(currentCardIndex);
+                }
+                // 空格键：翻转当前卡片
+                else if (e.key === ' ') {
+                    flashcards[currentCardIndex].classList.toggle('flipped');
+                    e.preventDefault(); // 防止页面滚动
+                }
+            });
+            
+            // 按钮导航
+            const prevBtn = document.querySelector('.btn-prev');
+            const nextBtn = document.querySelector('.btn-next');
+            
+            // 可以在这里添加按钮控制卡片的功能
+            // 当前设计中按钮用于页面切换，卡片切换通过键盘或卡片下方的提示
+        });
+    </script>
+</body>
+</html>
